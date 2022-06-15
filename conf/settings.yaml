@@ -1,0 +1,36 @@
+# configuration file with yaml syntax
+# pay attention to the correct indentation
+
+# list of nodes to synchronize
+nodes:
+# example
+#    node1:
+#        address: 'remotehost.localdomain'
+#        folders: 'all' | [folder1,folder2]
+#        ssh-port: 2222 (default 22) [optional]
+#        user: root (default is user who runs the script) [optional]
+
+# list of folders or files to synchronize
+folders:
+# example
+#    folder1:
+#        path: '/dev/null' (use rsync syntax for files and folders)
+#        dest: '/tmp/null' (use rsync syntax for files and folders) [optional]
+#        rsync-options: '--exclude "*.txt"' [optional]
+
+# list of services to restart or reload - if enabled
+enable-services: false
+services:
+# example
+#    service1:
+#        name: 'cron'
+#        method: 'restart' | 'reload'
+#        sudo: 'False' | 'True' [optional]
+
+# log file name (prefix is hardcoded with 'YYYYMM-' and default name is 'sync_nodes.log')  [optional]
+#log_file: 
+
+# sleep time between each operation (default 1 sec) [optional]
+#sleep-time-folders: 1
+#sleep-time-services: 1
+
